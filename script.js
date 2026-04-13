@@ -32,6 +32,13 @@ document.getElementById("formDoacao").addEventListener("submit", function (e) {
 
     if (!tipo) return alert("assinale a opção do tipo");
 
+    if (telefone === "") {
+        return alert("digite seu telefones");
+    }
+
+    if (!/^[0-9]+$/.test(telefone)) {
+        return alert("o telefone deve ter apenas numeros");
+    }
 
     if (estado.length <=0) return alert("digite o seu estado")
 
