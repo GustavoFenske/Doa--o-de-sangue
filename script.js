@@ -10,16 +10,16 @@ document.getElementById("formDoacao").addEventListener("submit", function (e) {
     let idade = document.getElementById("idade").value;
     let cidade = document.getElementById("cidade").value;
     let peso = document.getElementById("peso").value;
+     let tipo = document.getElementById("tipo").value;
+    let estado = document.getElementById("estado").value;
    
 
 
 
     
-    let = regexletras = /^[a-zÀ-ÿ\s]+$/;
 
-    if (partes.length < 2 || !regexletras.test(nome)){
+    if (partes.length < 2){
         alert("Digite o nome completo");
-        return false;  
     }
 
 
@@ -29,11 +29,17 @@ document.getElementById("formDoacao").addEventListener("submit", function (e) {
         return alert("o email precisa ter @");
     }
 
+
+    if (!tipo) return alert("assinale a opção do tipo");
+
+
+    if (estado.length <=0) return alert("digite o seu estado")
+
     if (telefone.length < 8) return alert("telefone invalido");
 
-    if (peso <= 50) return alert("voce precisa ter no minimo 50kg");
+    if (peso < 50) return alert("voce precisa ter no minimo 50kg");
 
-    if (idade < 16) return alert("é necessário ser maior de idade");
+    if (idade <= 16) return alert("precisa ter no minimo 16 anos");
 
     if (cidade.length <= 0) return alert("digite a sua cidade");
 
