@@ -1,0 +1,102 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Doação de sangue</title>
+</head>
+
+<body>
+    <header>
+
+        <img id="logo_site" src="assets/logo_site.png" alt="logo_site">
+        <h1>Site para doação de sangue</h1>
+
+    </header>
+
+
+
+    <main>
+
+        <div class="formulario"></div>
+
+        <form id="formDoação">
+
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" placeholder="Digite seu nome">
+            <br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Digite seu email">
+            <br>
+
+            <label for="idade">Idade:</label>
+            <input type="text" id="idade" placeholder="Digite a sua idade">
+            <br>
+
+            <label for="telefone">Telefone:</label>
+            <input type="text" id="telefone" placeholder="Digite o seu telefone">
+            <br>
+
+
+
+            <label for="peso">Peso:</label>
+            <input type="text" id="peso" placeholder="Digite o seu peso">
+            <br>
+
+            <label for="tipo">Tipo sanguineo: </label>
+
+            <select name="tipo" id="tipo">
+                <option value=""> Selecione</option>
+                <option value="A+">A+</option>
+                <option value="B+">B+</option>
+                <option value="AB+">AB+</option>
+                <option value="O+">O+</option>
+                  <option value="A-">A-</option>
+                <option value="B-">B-</option>
+                <option value="AB-">AB-</option>
+                <option value="O-">O-</option>
+            </select>
+            <br>
+
+
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" placeholder="Digite a sua cidade">
+            <br>
+
+            <label for="estado">Estado:</label>
+            <input type="text" id="estado" placeholder="Digite o seu estado">
+            <br>
+
+
+            <br>
+            <input type="checkbox" id="termo">
+            <label for="termo">Clique aqui para aceitar os termos</label><br>
+            <button type="submit">Enviar</button>
+            <br>
+
+
+
+
+
+
+        </form>
+    </main>
+
+
+    <div id="resultado"></div>
+    <script src="script.js"></script>
+    </form>
+
+
+
+
+
+</body>
+
+<footer>
+    <img id="gif" src="assets/gif.gif" alt="">
+</footer>
+
+</html>
