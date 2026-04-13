@@ -1,20 +1,20 @@
-document.getElementById("formAdoção").addEventListener("submit", function (e) {
+document.getElementById("formDoacao").addEventListener("submit", function (e) {
 
     e.preventDefault();
 
-    let nome = document.getElementById("nome").value.trim;
-    
+    let nome = document.getElementById("nome").value;
+    let partes = nome.split(" ");
+    console.log(partes);
     let email = document.getElementById("email").value;
     let telefone = document.getElementById("telefone").value;
-    let idade = document.getElementById("idade").value
-    let cidade = document.getElementById("cidade").value
-    let moradia = document.getElementById("moradia").value;
+    let idade = document.getElementById("idade").value;
+    let cidade = document.getElementById("cidade").value;
     let peso = document.getElementById("peso").value;
    
 
 
 
-    let partes = nome.split(/\s+/);
+    
     let = regexletras = /^[a-zÀ-ÿ\s]+$/;
 
     if (partes.length < 2 || !regexletras.test(nome)){
@@ -22,7 +22,7 @@ document.getElementById("formAdoção").addEventListener("submit", function (e) 
         return false;  
     }
 
-    
+
     if (email.includes("@")) {
 
     } else {
@@ -31,11 +31,12 @@ document.getElementById("formAdoção").addEventListener("submit", function (e) 
 
     if (telefone.length < 8) return alert("telefone invalido");
 
+    if (peso <= 50) return alert("voce precisa ter no minimo 50kg");
+
     if (idade < 16) return alert("é necessário ser maior de idade");
 
     if (cidade.length <= 0) return alert("digite a sua cidade");
 
     document.getElementById("resultado").innerHTML = "Cadastro realizado com sucesso!<br>" + "Nome: " + nome;
-
 
 });
