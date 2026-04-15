@@ -54,16 +54,20 @@ document.getElementById("formDoacao").addEventListener("submit", function (e) {
 
 
     let novodoador = {
-        nome: document.getElementById("nome").value,
-        email: document.getElementById("email").value;
-        telefone: document.getElementById("telefone").value;
-        idade: document.getElementById("idade").value;
-        cidade = document.getElementById("cidade").value;
-        peso: document.getElementById("peso").value;
-        tipo: document.getElementById("tipo").value;
-        estado: document.getElementById("estado").value;
+        nome: nome,
+        email: email,
+        telefone: telefone,
+        idade: idade,
+        cidade : cidade,
+        peso: peso,
+        tipo: tipo,
+        estado: estado,
     };
 
+
+listadoardor.push(novodoador);
+
+    console.log(novodoador)
     //guarda isso em um objeto
     //guarda o objeto dentro de um array que tu criou fora da função
     //doador
